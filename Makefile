@@ -1,19 +1,30 @@
-fluid_sim: build src/c/fluid_sim.c emsdk
+all: fluid_sim #all other compiled things
+
+clean:
+	rm -rf build
+
+
+fluid_sim: emscripten src/c/fluid_sim.c
 	emcc src/c/fluid_sim.c -o build/fluid_sim.wasm
-	
+		
+
+
 
 build: 
 	mkdir build
-
-dependancys: build
-	cd build
-	mkdir dependancys	
-
-
-emsdk: dependancys
-	git clone https://github.com/emscripten-core/emsdk.git
-	cd emsdk
+build/dependancys:
+	mkdir build/dependancys	
+build/dependancys/emscripten:
+	mkdir build/dependancys/emscripten
+	git clone https://github.com/emscripten-core/emsdk.git build/dependancys/emscripten
+	cd build/dependancys/emscripten
 	git pull
-	./emsdk install latest #permition denied needs fixing run by hand currently
+	./emsdk install latest #permition denied
 	./emsdk activate latest
 	source ./emsdk_env.sh
+
+dependancys_folder: build build/dependancys
+emscripten_folder: dependancys_folder build/dependancys/emscripten
+
+emscripten: emscripten_folder
+	
