@@ -1,4 +1,5 @@
-
+//load wasm
+//cwrap functions for geting particle position, updating the box dimentions and steping forward in time
 
 
 
