@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main(void){
-    printf("hello my world\n");
     return 0;
+}
+
+int c_function_fs(){
+    return 69;
 }

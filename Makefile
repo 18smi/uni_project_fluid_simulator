@@ -7,8 +7,8 @@ clean:
 fluid_sim: emscripten src/c/fluid_sim.c
 	emcc src/c/fluid_sim.c -o build/fluid_sim.wasm
 		
-open_html:
-	http-server
+html:
+	http-server -c01
 
 
 build: 
