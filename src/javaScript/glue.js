@@ -1,15 +1,15 @@
-fetch('build/fluid_sim.wasm')
-    .then(response => response.arrayBuffer())
-    .then(bytes => WebAssembly.instantiate(bytes))
-    .then(result => {
-        console.log(result.instance.exports.add(2, 3)); // Outputs: 5
-    }
-);
+//fetch('build/fluid_sim.wasm')
+//    .then(response => response.arrayBuffer())
+//    .then(bytes => WebAssembly.instantiate(bytes))
+//    .then(result => {
+//        console.log(result.instance.exports.add(2, 3)); // Outputs: 5
+//    }
+//);
 
-const get_x = Module.cwrap('get_particleX', 'number', []);
-const get_y = Module.cwrap('get_particleY', 'number', []);
-const chainge_box_size = Module.cwrap('update_box_size', 'number', 'number', []);//not sure if right
-const set_globals = Module.cwrap('set_global_forces', 'number', 'number', []);
+//const get_x = Module.cwrap('get_particleX', 'number', []);
+//const get_y = Module.cwrap('get_particleY', 'number', []);
+//const chainge_box_size = Module.cwrap('update_box_size', 'number', 'number', []);//not sure if right
+//const set_globals = Module.cwrap('set_global_forces', 'number', 'number', []);
 
 
 function update_bounds(){
@@ -19,7 +19,7 @@ function update_bounds(){
     canvas.style.left = (width/20).toString() + 'px';
     canvas.width = width - width/10;
     canvas.height = height - height/10 - height/50;
-    chainge_box_size(width, height);
+    //chainge_box_size(width, height);
 }
 function animate(){
     requestAnimationFrame(animate);
@@ -37,7 +37,7 @@ function animate(){
 }
 
 
-ccall('setup');
+//ccall('setup');
 
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
@@ -49,6 +49,6 @@ update_bounds();
 animate();
 
 
-window.onbeforeunload = function(e){
-    ccall('close')
-}
+//window.onbeforeunload = function(e){
+//    ccall('close')
+//}

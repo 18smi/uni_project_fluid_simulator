@@ -1,4 +1,4 @@
-all: fluid_sim #all other compiled things
+all: fluid_sim open_html#all other compiled things
 
 clean:
 	rm -rf build
@@ -7,7 +7,8 @@ clean:
 fluid_sim: emscripten src/c/fluid_sim.c
 	emcc src/c/fluid_sim.c -o build/fluid_sim.wasm
 		
-
+open_html:
+	http-server
 
 
 build: 
