@@ -4,6 +4,8 @@ unsigned int box_width;
 unsigned int box_height;
 unsigned short number_of_particals;
 
+int main(void){return 0;}
+
 void chainge_box(unsigned int width, unsigned int height){
     //chainge box dimentions 
     //push out of bounds particals back in bounds     might need to be in the step_forward()
@@ -20,7 +22,7 @@ unsigned int get_partical_x(unsigned short partical_number){
 
 unsigned int get_partical_y(unsigned short partical_number){
     //does as it says
-    return 10
+    return 10;
 }
 
 void step_forward(){

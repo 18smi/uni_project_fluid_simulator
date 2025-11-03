@@ -1,4 +1,4 @@
-all: fluid_sim open_html#all other compiled things
+all: fluid_sim html#all other compiled things
 
 clean:
 	rm -rf build
