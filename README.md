@@ -4,7 +4,7 @@ This project uses C and python for the logic, JavaScript as the midleman, and HT
 
 ### Setup
 1. run 'make'
-2. Open `src/html/fluid_sim_homepage.html` in your browser
+2. run 'make html' to open the html without re-compiling stuff
 
 ### Technologies
 - C
