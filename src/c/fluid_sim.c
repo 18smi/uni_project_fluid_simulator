@@ -6,6 +6,12 @@ unsigned short number_of_particals;
 
 int main(void){return 0;}
 
+int i = 0;
+int test_c(){
+    i += 10;
+    return i;
+}
+
 void chainge_box(unsigned int width, unsigned int height){
     //chainge box dimentions 
     //push out of bounds particals back in bounds     might need to be in the step_forward()

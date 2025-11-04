@@ -15,7 +15,7 @@ geting started with c to wasm <- will be simplified (see TODO)
     8) run 'make' <- from now on this is all you will need to re-compile
 
 opining the html
-    1) you may need to run 'npm i -g http-server' first
+    1) you may need to run 'npm i -g http-server' first <- TRY WITHOUT FIRST
     2) run 'make html'
     3) open the brouser from the popup in the bottom left
     3) navigate to src/html/fluid_sim_homepage.html
