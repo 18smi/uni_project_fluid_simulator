@@ -13,7 +13,8 @@ fetch('../../build/fluid_sim.wasm')
   .catch(console.error);
 */
 
-
+//cwrap 
+//ccall
 
 
 function update_bounds(){

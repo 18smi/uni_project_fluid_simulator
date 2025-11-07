@@ -4,6 +4,8 @@ unsigned int box_width;
 unsigned int box_height;
 unsigned short number_of_particals;
 
+void update_canvas();//java function called in the c code
+
 int main(void){return 0;}
 
 int i = 0;

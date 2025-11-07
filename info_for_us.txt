@@ -7,7 +7,7 @@ INSTRUCTIONS
 geting started with c to wasm <- will be simplified (see TODO)
     1) run 'make clean'
     2) run 'make' <- should stop at ./emsdk install latest
-    3) run 'cd build/dependancys/emsdk'
+    3) run 'cd build/dependancys/emscripten'
     4) run './emsdk install latest' <- takes a while
     5) run './emsdk activate latest'
     6) run 'source ./emsdk_env.sh'
