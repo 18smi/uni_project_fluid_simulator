@@ -13,8 +13,29 @@ fetch('../../build/fluid_sim.wasm')
   .catch(console.error);
 */
 
-//cwrap 
-//ccall
+
+//fetch() 
+//webAssembly.instantiate()
+//instance.exports
+
+
+try {
+  // Fetch and compile the WASM module
+  const response = await fetch('test_c.wasm');
+  const bytes = await response.arrayBuffer();
+  const { instance } = await WebAssembly.instantiate(bytes);
+
+  // Call the exported function
+  const result = instance.exports.test_c();
+  console.log("test =", result);
+  document.body.insertAdjacentHTML('beforeend', `<p>5 + 7 = ${result}</p>`);
+} catch (err) {
+  console.error("Error loading WASM:", err);
+}
+
+
+
+
 
 
 function update_bounds(){

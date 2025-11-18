@@ -6,6 +6,11 @@ clean:
 
 fluid_sim: emscripten src/c/fluid_sim.c
 	emcc src/c/fluid_sim.c -o build/fluid_sim.wasm
+
+fs:	emscripten src/c/fluid_sim.c
+	emcc src/c/fluid_sim.c -o fs_test.wasm -s STANDALONE_WASM=1 -O2
+	emcc simple.c -o simple.wasm -s STANDALONE_WASM=1 -O2 -Wl,--export=test_c
+
 		
 html:
 	http-server -c01

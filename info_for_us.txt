@@ -40,3 +40,8 @@ work out how to run a html on github codespace
 do the fluid sim c code
     1) get a ball in a box
     2) ...
+
+
+ensure emscripten licenses work with things
+    1) MIT license
+    2) University of Illinois/NCSA Open Source License
