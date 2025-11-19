@@ -1,4 +1,4 @@
-## Our uni Project
+# Fluid Simulation - SQ4007 Project
 
 This project uses C and python for the logic, JavaScript as the midleman, and HTML as the display.
 
