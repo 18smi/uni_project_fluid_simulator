@@ -18,7 +18,7 @@ this project uses the emcripten compiler-toolchain to compile c into web assembl
 ## Group name: Avid C Haters
 ## Group members:
 * Morgan: mel14sky
-* Abubaker: amahamoud177
+* Abubakar: amahamoud177
 * Ben: 18Smi
 #### Video Demo:  <URL HERE>
 #### Description:
